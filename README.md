@@ -4,34 +4,34 @@ This repository proposes improvements to The Slide Machine, which generates lect
 
 ## Team members
 
-- Spark Fan ([SparkFan-ui](https://github.com/SparkFan-ui)) — integration and documentation (A)
-- Yutong Xiao ([yx3295-star](https://github.com/yx3295-star)) — instructor research (B)
-- Tony Zibo Zhou ([TonyyZhou](https://github.com/TonyyZhou)) — student research (C)
-- Tony Dong ([tongdong016](https://github.com/tongdong016)) — wireframes (D)
-- Kevin Han ([kevinhan923](https://github.com/kevinhan923)) — clickable prototype (E)
+- Spark Fan ([SparkFan-ui](https://github.com/SparkFan-ui)) — integration and documentation
+- Yutong Xiao ([yx3295-star](https://github.com/yx3295-star)) — instructor research
+- Tony Zibo Zhou ([TonyyZhou](https://github.com/TonyyZhou)) — student research
+- Tony Dong ([tongdong016](https://github.com/tongdong016)) — wireframes
+- Kevin Han ([kevinhan923](https://github.com/kevinhan923)) — clickable prototype
 
 ## Review of the current application
 
 | # | Strength / weakness / gap | Specific observation in the live app | Task or screen | Observer |
 | --- | --- | --- | --- | --- |
-| 1 | Strength | Create account and Sign in put Sign up with Google / Sign in with Google above the email form, and "Forgot your password?" opens a Reset your password page that explains itself in one sentence. | Create account / Sign in | A |
-| 2 | Strength | With the microphone off, the empty lecture page says to click the + or microphone icons to start adding content; hovering the mic shows "Speak to add slides"; once on, it says "Start speaking to generate slides". | Lecture page (live capture) | E |
-| 3 | Strength | Lecture settings states that the settings apply to just this lecture, links to project-wide settings, explains that a blank Lecture title lets the AI title it from speech, and marks Seed notes "Saved automatically". | Lecture settings · General | D |
-| 4 | Strength | A shared deck (Fishing for squid) renders in its NYU design with a 1 / 7 counter, up and down votes, fullscreen, a translate dropdown and a per-slide menu offering "Speak this slide". | Deck viewer | C |
-| 5 | Strength | Plans states "Every plan includes every feature. What changes is how much of each you may use", shows a check for all eight features in every column, and marks Free as "Your plan". | Plans | A |
-| 6 | Strength | The Add seed material dialog explains itself ("Give the AI background for this lecture before you begin. Optional — you can add more anytime"), offers Seed notes and a PDF, DOCX, TXT or photo upload, and can be skipped. | Add seed material dialog | B |
-| 7 | Weakness | In Discover, three lectures by Levi Gilbert-Adler show the project as `<="` and the author as `Levi Gilbert-Adler<"=`, while every other row shows a readable project name such as Default project. | Home /app · Discover | B |
-| 8 | Weakness | The Add seed material dialog that follows + New lecture has no title field; the breadcrumb already reads Untitled lecture, and the Lecture title field lives in Lecture settings · General. | Add seed material dialog | E |
-| 9 | Weakness | For a newly created lecture with 0 slides, General access is already Public ("Anyone on the internet with the link can view") while People with access reads "Only you have access so far". | Lecture settings · Privacy & Sharing | E |
-| 10 | Weakness | The "1 / 7" slide counter under the slide is half hidden behind the footer bar that carries "API ok" and "Free plan ok". | Deck viewer | D |
-| 11 | Weakness | In List view the fullscreen icon is drawn on top of the downvote count at the top right, so the two controls overlap. | Deck viewer · List view | D |
-| 12 | Weakness | The page behind the Default project breadcrumb is headed "Default project · Christina Lin" yet lists the observer's own Untitled lecture (0 slides) beside her Fishing for squid, one owner name above two people's lectures. | Project page | E |
-| 13 | Weakness | In the observation session with Chel, instructions spoken to the app while presenting were transcribed into the slide as content instead of being treated as commands. | Lecture page (live capture on) | C |
-| 14 | Weakness | In the two teacher sessions, both teachers, after seeing the landing page ("Speak freely — the slides will follow") and Home, said they were unsure what the app was for and where templates or materials live. | Landing page / Home /app | B |
-| 15 | Gap | The menu drawer lists Home, Profile, Account settings, About us, Send feedback, Privacy policy, Terms & conditions and Log out; no entry leads to the user's own projects or lectures. | Menu drawer | C |
-| 16 | Gap | Both General access options are described in terms of "the link" ("with the link can view", "open with the link"), yet the Privacy & Sharing tab shows no link and no copy control. | Lecture settings · Privacy & Sharing | B |
-| 17 | Gap | Once the microphone is on, the page shows the red mic, "Start speaking to generate slides" and, while speaking, a caption line; no elapsed time or remaining Audio recording time, which Plans meters, appears. | Lecture page (live capture on) | E |
-| 18 | Gap | Discover offers only the Latest and Top tabs and a search box for "lectures, projects, people"; there is no way to narrow the list by course or topic. | Home /app · Discover | A |
+| 1 | Strength | Create account and Sign in put Sign up with Google / Sign in with Google above the email form, and "Forgot your password?" opens a Reset your password page that explains itself in one sentence. | Create account / Sign in | Spark Fan |
+| 2 | Strength | With the microphone off, the empty lecture page says to click the + or microphone icons to start adding content; hovering the mic shows "Speak to add slides"; once on, it says "Start speaking to generate slides". | Lecture page (live capture) | Kevin Han |
+| 3 | Strength | Lecture settings states that the settings apply to just this lecture, links to project-wide settings, explains that a blank Lecture title lets the AI title it from speech, and marks Seed notes "Saved automatically". | Lecture settings · General | Tony Dong |
+| 4 | Strength | A shared deck (Fishing for squid) renders in its NYU design with a 1 / 7 counter, up and down votes, fullscreen, a translate dropdown and a per-slide menu offering "Speak this slide". | Deck viewer | Tony Zibo Zhou |
+| 5 | Strength | Plans states "Every plan includes every feature. What changes is how much of each you may use", shows a check for all eight features in every column, and marks Free as "Your plan". | Plans | Spark Fan |
+| 6 | Strength | The Add seed material dialog explains itself ("Give the AI background for this lecture before you begin. Optional — you can add more anytime"), offers Seed notes and a PDF, DOCX, TXT or photo upload, and can be skipped. | Add seed material dialog | Yutong Xiao |
+| 7 | Weakness | In Discover, three lectures by Levi Gilbert-Adler show the project as `<="` and the author as `Levi Gilbert-Adler<"=`, while every other row shows a readable project name such as Default project. | Home /app · Discover | Yutong Xiao |
+| 8 | Weakness | The Add seed material dialog that follows + New lecture has no title field; the breadcrumb already reads Untitled lecture, and the Lecture title field lives in Lecture settings · General. | Add seed material dialog | Kevin Han |
+| 9 | Weakness | For a newly created lecture with 0 slides, General access is already Public ("Anyone on the internet with the link can view") while People with access reads "Only you have access so far". | Lecture settings · Privacy & Sharing | Kevin Han |
+| 10 | Weakness | The "1 / 7" slide counter under the slide is half hidden behind the footer bar that carries "API ok" and "Free plan ok". | Deck viewer | Tony Dong |
+| 11 | Weakness | In List view the fullscreen icon is drawn on top of the downvote count at the top right, so the two controls overlap. | Deck viewer · List view | Tony Dong |
+| 12 | Weakness | The page behind the Default project breadcrumb is headed "Default project · Christina Lin" yet lists the observer's own Untitled lecture (0 slides) beside her Fishing for squid, one owner name above two people's lectures. | Project page | Kevin Han |
+| 13 | Weakness | In the observation session with Chel, instructions spoken to the app while presenting were transcribed into the slide as content instead of being treated as commands. | Lecture page (live capture on) | Tony Zibo Zhou |
+| 14 | Weakness | In the two teacher sessions, both teachers, after seeing the landing page ("Speak freely — the slides will follow") and Home, said they were unsure what the app was for and where templates or materials live. | Landing page / Home /app | Yutong Xiao |
+| 15 | Gap | The menu drawer lists Home, Profile, Account settings, About us, Send feedback, Privacy policy, Terms & conditions and Log out; no entry leads to the user's own projects or lectures. | Menu drawer | Tony Zibo Zhou |
+| 16 | Gap | Both General access options are described in terms of "the link" ("with the link can view", "open with the link"), yet the Privacy & Sharing tab shows no link and no copy control. | Lecture settings · Privacy & Sharing | Yutong Xiao |
+| 17 | Gap | Once the microphone is on, the page shows the red mic, "Start speaking to generate slides" and, while speaking, a caption line; no elapsed time or remaining Audio recording time, which Plans meters, appears. | Lecture page (live capture on) | Kevin Han |
+| 18 | Gap | Discover offers only the Latest and Top tabs and a search box for "lectures, projects, people"; there is no way to narrow the list by course or topic. | Home /app · Discover | Spark Fan |
 
 **Research context, separate from the live-app review:** instructor interviewees reported unclear purpose and category labels, difficulty finding material and templates, and time spent manually adjusting slides. Student interviewees liked the basic speech-to-slide workflow but reported context loss, hard-to-find editing controls, and limited study support. These reports inform the proposal; they do not replace the team observations required above.
 
@@ -43,14 +43,14 @@ Existing or specified capabilities already include seed material, a template lib
 
 ## Stakeholders
 
-The instructor findings below come from the supplied B research document. It reports interviews with two teachers but combines many findings rather than attributing each point to a particular individual. Interviewees are identified by role or pseudonym; full names and contact details should be shared privately with the course staff, not published in this README.
+The instructor findings below come from the instructor research notes. They report interviews with two teachers but combine many findings rather than attributing each point to a particular individual. Interviewees are identified by role or pseudonym; full names and contact details should be shared privately with the course staff, not published in this README.
 
 ### Instructor stakeholders
 
 | Participant | Context | Reported needs | Reported difficulties |
 | --- | --- | --- | --- |
-| Teacher 1 | College Radiation Physics instructor | Prepare lectures more quickly, reuse teaching content, find relevant resources, reduce formatting, understand the tool's purpose | B reports unclear app purpose, difficult discovery, unclear categories, and manual work across the two teachers; it does not reliably assign each difficulty to Teacher 1. |
-| Teacher 2 | Community nonprofit English teacher who also leads after-class childcare | Prepare lectures more quickly, reuse teaching content, find relevant resources, reduce formatting, understand the tool's purpose | B reports the same combined themes but does not reliably assign each difficulty to Teacher 2. |
+| Teacher 1 | College Radiation Physics instructor | Prepare lectures more quickly, reuse teaching content, find relevant resources, reduce formatting, understand the tool's purpose | The notes report unclear app purpose, difficult discovery, unclear categories, and manual work across the two teachers; they do not reliably assign each difficulty to Teacher 1. |
+| Teacher 2 | Community nonprofit English teacher who also leads after-class childcare | Prepare lectures more quickly, reuse teaching content, find relevant resources, reduce formatting, understand the tool's purpose | The notes report the same combined themes but do not reliably assign each difficulty to Teacher 2. |
 
 Across the two interviews, the needs are (1) less preparation time, (2) generation based on existing content, (3) easier template/material discovery, (4) less manual formatting, and (5) an understandable starting point. The reported frustrations are (1) unclear app purpose, (2) hard-to-find templates/materials, (3) unclear categories, (4) time-consuming manual preparation, and (5) manual layout adjustment.
 
@@ -114,13 +114,13 @@ Existing capabilities named below are starting points. Each story specifies a ne
 
 **Story:** T03 — As an instructor with existing material, I want to see what source content was accepted before generating, so that I know what the deck will use.
 
-![B1 — Getting started and creating slides (activity diagram from B)](images/instructor-getting-started-activity.jpeg)
+![B1 — Getting started and creating slides (activity diagram)](images/instructor-getting-started-activity.jpeg)
 
 ### B2 — Finding and using templates
 
 **Story:** T05 — As an instructor browsing designs, I want understandable categories with previews, so that I can choose a template appropriate to my lecture.
 
-![B2 — Finding and using templates (activity diagram from B)](images/instructor-templates-activity.jpeg)
+![B2 — Finding and using templates (activity diagram)](images/instructor-templates-activity.jpeg)
 
 ### C1 — Real-time collaboration
 
@@ -136,7 +136,7 @@ Existing capabilities named below are starting points. Each story specifies a ne
 
 ## Wireframes
 
-[Open the Figma design: D Wireframes — B+C complete](https://www.figma.com/design/xSlHrGphQWleYhSJwaD4ST?node-id=7-2). It contains 27 black-and-white screens and states; the former v1 page was removed.
+[Open the Figma design: Wireframes](https://www.figma.com/design/xSlHrGphQWleYhSJwaD4ST?node-id=7-2). It contains 27 black-and-white screens and states; the former v1 page was removed.
 
 | Role | Screens covered | Main requirements |
 | --- | --- | --- |
@@ -162,7 +162,7 @@ Nothing that exists today is renamed or removed. The rows below are the only cha
 
 #### Screen index
 
-The prototype screens carry the live app's header and footer so that a reviewer recognises where they are; layout and content follow D's Figma wireframes. Full-size PNG exports are in [images/wireframes](images/wireframes).
+The prototype screens carry the live app's header and footer so that a reviewer recognises where they are; layout and content follow the Figma wireframes. Full-size PNG exports are in [images/wireframes](images/wireframes).
 
 **Instructor (T01–T12)**
 
