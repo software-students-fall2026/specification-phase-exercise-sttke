@@ -4,11 +4,11 @@ This repository proposes improvements to The Slide Machine, which generates lect
 
 ## Team members
 
-- ____________________ — integration and documentation (A)
-- ____________________ — instructor research (B)
-- ____________________ — student research (C)
-- ____________________ — wireframes (D)
-- ____________________ — clickable prototype (E)
+- _Spark Fan___________________ — integration and documentation (A)
+- _Tony Zibo Zhou___________________ — instructor research (B)
+- _Yutong Xiao___________________ — student research (C)
+- _Tony Dong___________________ — wireframes (D)
+- _Kevin Han___________________ — clickable prototype (E)
 
 ## Review of the current application
 
