@@ -4,11 +4,11 @@ This repository proposes improvements to The Slide Machine, which generates lect
 
 ## Team members
 
-- _Spark Fan___________________ — integration and documentation (A)
-- _Tony Zibo Zhou___________________ — instructor research (B)
-- _Yutong Xiao___________________ — student research (C)
-- _Tony Dong___________________ — wireframes (D)
-- _Kevin Han___________________ — clickable prototype (E)
+- Spark Fan ([SparkFan-ui](https://github.com/SparkFan-ui)) — integration and documentation (A)
+- Yutong Xiao ([yx3295-star](https://github.com/yx3295-star)) — instructor research (B)
+- Tony Zibo Zhou ([TonyyZhou](https://github.com/TonyyZhou)) — student research (C)
+- Tony Dong ([tongdong016](https://github.com/tongdong016)) — wireframes (D)
+- Kevin Han ([kevinhan923](https://github.com/kevinhan923)) — clickable prototype (E)
 
 ## Review of the current application
 
@@ -37,15 +37,15 @@ This repository proposes improvements to The Slide Machine, which generates lect
 
 ## Prior art and originality
 
-We compared the proposed work with the upstream [software design document, especially §18 Future Work and §19 Open Questions](https://github.com/bloombar/slide-machine/blob/better-faster/docs/SPEC.md), its [delivery roadmap](https://github.com/bloombar/slide-machine/blob/better-faster/docs/ROADMAP.md), and the [open issues](https://github.com/bloombar/slide-machine/issues) and [pull requests](https://github.com/bloombar/slide-machine/pulls). The review was last performed on 27 September 2026; the upstream default branch was `better-faster`. Recheck these moving sources before submission.
+We compared the proposed work with the upstream [software design document, especially §18 Future Work and §19 Open Questions](https://github.com/bloombar/slide-machine/blob/better-faster/docs/SPEC.md), its [delivery roadmap](https://github.com/bloombar/slide-machine/blob/better-faster/docs/ROADMAP.md), and the [open issues](https://github.com/bloombar/slide-machine/issues) and [pull requests](https://github.com/bloombar/slide-machine/pulls). The review was last performed on 27 September 2026; the upstream default branch was `better-faster` at that time.
 
 Existing or specified capabilities already include seed material, a template library, automatic layout choice, editing, deck sharing, quizzes, and Google Slides export. Real-time collaborative editing is explicitly listed as upstream future work. We therefore describe material reuse, template choice, Google Slides export, and collaboration as improvements to existing/planned workflows, **not** newly invented capabilities. Our proposed contribution is the interaction design that connects a guided preparation path and pre-share review to student summaries, questions linked to source slides, and active recall with recoverable failures. The design itself requires team and stakeholder validation; we do not claim an unverified exclusive implementation idea.
 
 ## Stakeholders
 
-The instructor findings below come from the supplied B research document. It reports interviews with two teachers but combines many findings rather than attributing each point to a particular individual. The student findings come from the existing C research in this repository. Interviewees are identified by role or pseudonym; full names and contact details should be shared privately with the course staff, not published in this README.
+The instructor findings below come from the supplied B research document. It reports interviews with two teachers but combines many findings rather than attributing each point to a particular individual. Interviewees are identified by role or pseudonym; full names and contact details should be shared privately with the course staff, not published in this README.
 
-### Instructor stakeholders (B)
+### Instructor stakeholders
 
 | Participant | Context | Reported needs | Reported difficulties |
 | --- | --- | --- | --- |
@@ -54,80 +54,13 @@ The instructor findings below come from the supplied B research document. It rep
 
 Across the two interviews, the needs are (1) less preparation time, (2) generation based on existing content, (3) easier template/material discovery, (4) less manual formatting, and (5) an understandable starting point. The reported frustrations are (1) unclear app purpose, (2) hard-to-find templates/materials, (3) unclear categories, (4) time-consuming manual preparation, and (5) manual layout adjustment.
 
-#### Interview notes from B (added verbatim from partB_TeacherResearch.docx)
-
-**Teacher participants.** We interviewed two teachers to understand their current workflow for preparing lecture materials and their experience using The Slide Machine.
-
-- Teacher 1: Teaches Radiation Physics in the college.
-- Teacher 2: Teaches community nonprofit English courses and leads an after-class childcare for kids.
-
-The interviews focused on how teachers currently prepare slides and quizzes, what they found difficult when using The Slide Machine, and what improvements could make the preparation process easier.
-
-**Teacher goals and needs.** Based on the interviews, the following teacher needs were identified:
-
-- Reduce preparation time — Teachers want to spend less time preparing lecture materials and formatting slides.
-- Generate slides from existing teaching content — Teachers would like to provide existing materials or content and have the system generate related slides.
-- Find relevant templates and materials more easily — Teachers need a clearer way to locate appropriate templates and teaching materials.
-- Reduce manual slide formatting — Teachers would like the system to automatically arrange slide layouts instead of requiring extensive manual adjustments.
-- Understand the purpose of the application clearly — Teachers need to understand how The Slide Machine can support their lecture-slide preparation before they can use it effectively.
-
-**Teacher problems / pain points.** The interviews identified the following problems:
-
-- The purpose of the application is not immediately clear. One teacher was unsure how the application could help with lecture slides.
-- Finding templates and materials can be difficult. One teacher reported that it was initially difficult to find appropriate templates and materials.
-- The categories are not sufficiently clear. One teacher reported that the categories were unclear, making it take longer to find relevant resources.
-- Slide preparation requires too much manual work. One teacher reported that making slides takes too much time because many elements still need to be adjusted manually.
-- Manual layout adjustment increases preparation effort. One teacher specifically suggested that automatic layout arrangement would make the process easier.
-
-**Teacher user requirements.**
-
-- Clear guidance and onboarding — Provide clear instructions and guidance so teachers can quickly understand what The Slide Machine does, how it can help with lecture preparation, and how to use its main features.
-- Faster slide preparation — Reduce the time teachers need to spend creating and preparing lecture slides.
-- Generate slides from existing materials — Allow teachers to provide existing teaching materials or lecture content and generate related slides automatically.
-- Automatic slide layout — Automatically arrange text, images, and other content into a clear slide layout instead of requiring teachers to adjust everything manually.
-- Clearer template and material categories — Organize templates and teaching materials into clear and understandable categories.
-- Easier template and material discovery — Make it easier for teachers to browse, search for, and select appropriate templates and teaching materials.
-- Reuse existing teaching content — Allow teachers to use content they have already prepared instead of creating materials from scratch.
-- Easy editing and customization — Allow teachers to easily adjust generated slides when the content or layout needs to be changed.
-- Review generated materials — Allow teachers to review and modify generated materials before using or sharing them.
-- Reduce repetitive preparation work — Automate repetitive tasks involved in creating and formatting teaching materials.
-
-### Student stakeholders (C)
+### Student stakeholders
 
 **Chel — student and presentation author.** Chel valued the speed of speech-to-slide creation but reported lost context between slides, awkward editing, uncertain language settings, difficult navigation in long decks, and difficulty locating image upload, undo/history, and export. Chel also wanted group collaboration, Google Slides compatibility, short review material, and active recall. Spoken instructions were sometimes treated as slide content.
 
 **Lan — student and presentation author.** Lan found the basic generation process easy to learn but had difficulty with settings, controls, text/visual editing, adding images, sharing, and finding previous work. Lan wanted timing and rehearsal assistance, support for group presentations, important concepts, and related practice questions.
 
 Together, their needs include faster presentation creation, flexible editing, coherent generated content, group collaboration, familiar export options, presentation preparation, concise review, and active practice. Their frustrations include context loss, hard-to-find controls, awkward editing, long-deck navigation, weak group workflows, limited rehearsal support, study material disconnected from practice, and speech instructions appearing as slide content.
-
-#### Interview notes from C (added verbatim from the C research README)
-
-**Stakeholder 1 — Chel.** Role: Student / Student Presenter-Author. Key findings: Student 1 found the speech-to-slide generation process efficient and easy to understand, especially the ability to turn rough spoken ideas into structured slides. However, the student experienced context loss between slides, awkward manual editing, unclear language-setting behavior, difficulty navigating longer decks, and problems finding functions such as image upload, undo/history, and PPTX export. As a student presenter, the student emphasized the need for real-time group collaboration and better compatibility with Google Slides. As a learner, the student wanted condensed review materials, AI questioning, and active-recall practice. The student also found that when giving spoken instructions to the AI, the system sometimes treated those instructions as presentation content and inserted them into the slide as bullet points instead of interpreting them as commands.
-
-**Stakeholder 2 — Lan.** Role: Student / Student Presenter-Author. Key findings: Student 2 found the interface simple and understood the basic presentation-generation workflow quickly. However, the student had difficulty with language settings, unfamiliar button behavior, limited text and visual editing, image insertion, sharing, and locating previously generated material. For presentation work, the student wanted presenter view, duration control, rehearsal feedback, progressive reveal, citations, editable charts, and stronger support for group presentations. For studying, the student wanted automatic extraction of important concepts and practice questions directly connected to those concepts.
-
-**Student goals / needs**
-
-1. Efficient presentation creation — Students want to quickly transform rough spoken ideas into structured slides without starting from a blank presentation.
-2. Flexible slide editing — Students want to freely edit text, images, layouts, and formatting after AI generation.
-3. Real-time group collaboration — Students want multiple teammates to work on the same presentation simultaneously and see one another's changes.
-4. Compatibility with existing presentation tools — Students want presentations to work smoothly with tools such as Google Slides and PowerPoint.
-5. Coherent content across slides — Students want generated slides to maintain context and logical continuity throughout a presentation.
-6. Presentation delivery and rehearsal support — Students want tools such as duration control, presenter view, and rehearsal feedback to prepare for class presentations.
-7. Efficient exam review — Students want long lecture decks condensed into key concepts, summaries, or cheat sheets.
-8. Active learning and practice — Students want AI-generated questions, active recall, and verbal practice to help them evaluate their understanding.
-
-**Student problems / frustrations**
-
-1. Context can be lost between generated slides — Later slides may fail to follow logically from earlier content.
-2. Manual editing is limited or awkward — Adjusting text, layout, images, and formatting can be more difficult than in familiar presentation tools.
-3. Some controls are difficult to discover or understand — Students had difficulty locating language settings, image upload, undo/history, export, and sharing functions.
-4. System feedback is sometimes unclear — Students were sometimes unsure whether an action, such as changing language settings or opening a menu, had succeeded.
-5. Long decks can be difficult to navigate — Missing or unclear page numbering, history, or overview features make it harder to locate specific content.
-6. Group presentation workflows are limited — Students expected stronger support for simultaneous editing and collaboration on group assignments.
-7. Presentation preparation tools are incomplete — Students wanted support for timing, rehearsal, presenter notes, and presentation delivery after the slides were generated.
-8. Lecture materials offer limited active study support — Students wanted stronger connections between summaries, important concepts, practice questions, and active recall.
-9. Spoken instructions can be mistaken for slide content — When students give the AI instructions about how to modify or generate a presentation, the system may treat those commands as content and place them directly into the slide as bullet points, making it difficult to distinguish between instructions and material intended for the audience.
 
 ## Product vision statement
 
@@ -137,7 +70,7 @@ The Slide Machine should guide instructors and student presenters from reusable 
 
 Existing capabilities named below are starting points. Each story specifies a new or changed interaction, not a claim that the underlying capability is missing. IDs connect stories to the design artifacts.
 
-### Instructor user stories (B)
+### Instructor user stories
 
 1. **T01** — As a first-time instructor, I want task-based guidance that shows how lecture preparation works, so that I know where to start.
 2. **T02** — As an instructor preparing a lecture, I want a visible path from source material to deck review, so that I can finish preparation without searching for the next step.
@@ -150,7 +83,7 @@ Existing capabilities named below are starting points. Each story specifies a ne
 9. **T09** — As an instructor about to teach or share, I want to review the deck and any unresolved items first, so that I can correct them before others see it.
 10. **T10** — As an instructor repeating preparation tasks, I want relevant prior choices to be offered for confirmation, so that I can avoid unnecessary repeated setup.
 
-### Student user stories (C)
+### Student user stories
 
 1. **S01** — As a student presenter, I want to edit a presentation with teammates in real time, so that we can see each other's progress.
 2. **S02** — As a student presenter, I want a clear transfer path to Google Slides, so that my team can keep using its familiar tools.
@@ -165,6 +98,15 @@ Existing capabilities named below are starting points. Each story specifies a ne
 11. **S11** — As a student presenter, I want the system to distinguish spoken editing commands from slide content, so that instructions do not become audience-facing bullets.
 
 **Cross-role rule:** a shared deck and its study material must respect the deck's access settings. A generated summary or question should point to its source slide, and a failed upload or generation should preserve material the user has already supplied. Real-time collaboration (S01) remains overlapping upstream future work, while Google Slides export (S02) is an improvement to an existing capability.
+
+### Requirements to design traceability
+
+| Workflow | User stories | Activity diagrams | Wireframes and prototype |
+| --- | --- | --- | --- |
+| Guided lecture creation and material recovery | T01–T03, T07, T10 | B1 | T01–T04, including upload failure |
+| Design discovery, generation, and review | T04–T06, T08–T09, S03 | B1, B2 | T05–T11, including no results and generation failure |
+| Sharing and student study | T09, S08–S10 | C2 | T12, S01–S06, including microphone fallback and feedback |
+| Student group presentation | S01–S07, S11 | C1 | S07–S15, including version recovery, rehearsal, export, and command confirmation |
 
 ## Activity diagrams
 
@@ -192,7 +134,7 @@ Existing capabilities named below are starting points. Each story specifies a ne
 
 ![Student Active Recall Activity Diagram](images/student-active-recall-activity.png)
 
-## Wireframes (D)
+## Wireframes
 
 [Open the Figma design: D Wireframes — B+C complete](https://www.figma.com/design/xSlHrGphQWleYhSJwaD4ST?node-id=7-2). It contains 27 black-and-white screens and states; the former v1 page was removed.
 
@@ -264,7 +206,7 @@ The prototype screens carry the live app's header and footer so that a reviewer 
 | S14 Export presentation | Google Slides, PDF or YAML; Cancel, Export. | <img src="images/wireframes/S14.png" width="360" alt="S14 Export presentation"> |
 | S15 Confirm spoken instruction | Detected instruction shown over the live deck; Add as slide text, Apply edit, Cancel. | <img src="images/wireframes/S15.png" width="360" alt="S15 Confirm spoken instruction"> |
 
-## Clickable prototype (E)
+## Clickable prototype
 
 **Public prototype:** [Slide Machine Prototype on Figma — anyone with the link can view, no login needed](https://www.figma.com/proto/KisgOB8gz8FuthCTWzZcll/Slide-Machine-Prototype?node-id=9-100&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A100&show-proto-sidebar=1&page-id=0%3A1)
 
