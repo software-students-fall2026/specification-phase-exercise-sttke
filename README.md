@@ -10,7 +10,7 @@ This repository proposes improvements to The Slide Machine, which generates lect
 - Tony Dong ([tongdong016](https://github.com/tongdong016)) — wireframes
 - Kevin Han ([kevinhan923](https://github.com/kevinhan923)) — clickable prototype
 
-## Review of the current application
+## Review of the Current Application
 
 | # | Strength / weakness / gap | Specific observation in the live app | Task or screen | Observer |
 | --- | --- | --- | --- | --- |
@@ -20,12 +20,12 @@ This repository proposes improvements to The Slide Machine, which generates lect
 | 4 | Strength | A shared deck (Fishing for squid) renders in its NYU design with a 1 / 7 counter, up and down votes, fullscreen, a translate dropdown and a per-slide menu offering "Speak this slide". | Deck viewer | Tony Zibo Zhou |
 | 5 | Strength | Plans states "Every plan includes every feature. What changes is how much of each you may use", shows a check for all eight features in every column, and marks Free as "Your plan". | Plans | Spark Fan |
 | 6 | Strength | The Add seed material dialog explains itself ("Give the AI background for this lecture before you begin. Optional — you can add more anytime"), offers Seed notes and a PDF, DOCX, TXT or photo upload, and can be skipped. | Add seed material dialog | Yutong Xiao |
-| 7 | Weakness | In Discover, three lectures by Levi Gilbert-Adler show the project as `<="` and the author as `Levi Gilbert-Adler<"=`, while every other row shows a readable project name such as Default project. | Home /app · Discover | Yutong Xiao |
+| 7 | Weakness | In Discover, three lectures by one user show the project as `<="` and the author name followed by `<"=`, while every other row shows a readable project name such as Default project. | Home /app · Discover | Yutong Xiao |
 | 8 | Weakness | The Add seed material dialog that follows + New lecture has no title field; the breadcrumb already reads Untitled lecture, and the Lecture title field lives in Lecture settings · General. | Add seed material dialog | Kevin Han |
 | 9 | Weakness | For a newly created lecture with 0 slides, General access is already Public ("Anyone on the internet with the link can view") while People with access reads "Only you have access so far". | Lecture settings · Privacy & Sharing | Kevin Han |
 | 10 | Weakness | The "1 / 7" slide counter under the slide is half hidden behind the footer bar that carries "API ok" and "Free plan ok". | Deck viewer | Tony Dong |
 | 11 | Weakness | In List view the fullscreen icon is drawn on top of the downvote count at the top right, so the two controls overlap. | Deck viewer · List view | Tony Dong |
-| 12 | Weakness | The page behind the Default project breadcrumb is headed "Default project · Christina Lin" yet lists the observer's own Untitled lecture (0 slides) beside her Fishing for squid, one owner name above two people's lectures. | Project page | Kevin Han |
+| 12 | Weakness | The page behind the Default project breadcrumb is headed "Default project" with another user's name as owner, yet lists the observer's own Untitled lecture (0 slides) beside that user's Fishing for squid, one owner name above two people's lectures. | Project page | Kevin Han |
 | 13 | Weakness | In the observation session with Chel, instructions spoken to the app while presenting were transcribed into the slide as content instead of being treated as commands. | Lecture page (live capture on) | Tony Zibo Zhou |
 | 14 | Weakness | In the two teacher sessions, both teachers, after seeing the landing page ("Speak freely — the slides will follow") and Home, said they were unsure what the app was for and where templates or materials live. | Landing page / Home /app | Yutong Xiao |
 | 15 | Gap | The menu drawer lists Home, Profile, Account settings, About us, Send feedback, Privacy policy, Terms & conditions and Log out; no entry leads to the user's own projects or lectures. | Menu drawer | Tony Zibo Zhou |
@@ -33,17 +33,17 @@ This repository proposes improvements to The Slide Machine, which generates lect
 | 17 | Gap | Once the microphone is on, the page shows the red mic, "Start speaking to generate slides" and, while speaking, a caption line; no elapsed time or remaining Audio recording time, which Plans meters, appears. | Lecture page (live capture on) | Kevin Han |
 | 18 | Gap | Discover offers only the Latest and Top tabs and a search box for "lectures, projects, people"; there is no way to narrow the list by course or topic. | Home /app · Discover | Spark Fan |
 
-**Research context, separate from the live-app review:** instructor interviewees reported unclear purpose and category labels, difficulty finding material and templates, and time spent manually adjusting slides. Student interviewees liked the basic speech-to-slide workflow but reported context loss, hard-to-find editing controls, and limited study support. These reports inform the proposal; they do not replace the team observations required above.
+**Research context, separate from the live-app review:** instructor interviewees reported unclear purpose and category labels, difficulty finding material and templates, and time spent manually adjusting slides. Student interviewees liked the basic speech-to-slide workflow but reported context loss, hard-to-find editing controls, and limited study support.
 
-## Prior art and originality
+## Prior Art & Originality
 
 We compared the proposed work with the upstream [software design document, especially §18 Future Work and §19 Open Questions](https://github.com/bloombar/slide-machine/blob/better-faster/docs/SPEC.md), its [delivery roadmap](https://github.com/bloombar/slide-machine/blob/better-faster/docs/ROADMAP.md), and the [open issues](https://github.com/bloombar/slide-machine/issues) and [pull requests](https://github.com/bloombar/slide-machine/pulls). The review was last performed on 27 September 2026; the upstream default branch was `better-faster` at that time.
 
-Existing or specified capabilities already include seed material, a template library, automatic layout choice, editing, deck sharing, quizzes, and Google Slides export. Real-time collaborative editing is explicitly listed as upstream future work. We therefore describe material reuse, template choice, Google Slides export, and collaboration as improvements to existing/planned workflows, **not** newly invented capabilities. Our proposed contribution is the interaction design that connects a guided preparation path and pre-share review to student summaries, questions linked to source slides, and active recall with recoverable failures. The design itself requires team and stakeholder validation; we do not claim an unverified exclusive implementation idea.
+Existing or specified capabilities already include seed material, a template library, automatic layout choice, editing, deck sharing, quizzes, and Google Slides export. Real-time collaborative editing is explicitly listed as upstream future work. We therefore describe material reuse, template choice, Google Slides export, and collaboration as improvements to existing/planned workflows, **not** newly invented capabilities. Our proposed contribution is the interaction design that connects a guided preparation path and pre-share review to student summaries, questions linked to source slides, and active recall with recoverable failures.
 
 ## Stakeholders
 
-The instructor findings below come from the instructor research notes. They report interviews with two teachers but combine many findings rather than attributing each point to a particular individual. Interviewees are identified by role or pseudonym; full names and contact details should be shared privately with the course staff, not published in this README.
+The instructor findings below come from the instructor research notes. They report interviews with two teachers but combine many findings rather than attributing each point to a particular individual.
 
 ### Instructor stakeholders
 
@@ -62,11 +62,11 @@ Across the two interviews, the needs are (1) less preparation time, (2) generati
 
 Together, their needs include faster presentation creation, flexible editing, coherent generated content, group collaboration, familiar export options, presentation preparation, concise review, and active practice. Their frustrations include context loss, hard-to-find controls, awkward editing, long-deck navigation, weak group workflows, limited rehearsal support, study material disconnected from practice, and speech instructions appearing as slide content.
 
-## Product vision statement
+## Product Vision Statement
 
 The Slide Machine should guide instructors and student presenters from reusable material to a coherent, reviewable deck, then let students follow that deck into concise, source-linked review and practice, with clear feedback when a step fails.
 
-## User requirements
+## User Requirements
 
 Existing capabilities named below are starting points. Each story specifies a new or changed interaction, not a claim that the underlying capability is missing. IDs connect stories to the design artifacts.
 
@@ -103,32 +103,32 @@ Existing capabilities named below are starting points. Each story specifies a ne
 
 | Workflow | User stories | Activity diagrams | Wireframes and prototype |
 | --- | --- | --- | --- |
-| Guided lecture creation and material recovery | T01–T03, T07, T10 | B1 | T01–T04, including upload failure |
-| Design discovery, generation, and review | T04–T06, T08–T09, S03 | B1, B2 | T05–T11, including no results and generation failure |
-| Sharing and student study | T09, S08–S10 | C2 | T12, S01–S06, including microphone fallback and feedback |
-| Student group presentation | S01–S07, S11 | C1 | S07–S15, including version recovery, rehearsal, export, and command confirmation |
+| Guided lecture creation and material recovery | T01–T03, T07, T10 | Getting started and creating slides | T01–T04, including upload failure |
+| Design discovery, generation, and review | T04–T06, T08–T09, S03 | Getting started and creating slides; Finding and using templates | T05–T11, including no results and generation failure |
+| Sharing and student study | T09, S08–S10 | Active recall | T12, S01–S06, including microphone fallback and feedback |
+| Student group presentation | S01–S07, S11 | Real-time collaboration | S07–S15, including version recovery, rehearsal, export, and command confirmation |
 
-## Activity diagrams
+## Activity Diagrams
 
-### B1 — Getting started and creating slides
+### Instructor: getting started and creating slides
 
 **Story:** T03 — As an instructor with existing material, I want to see what source content was accepted before generating, so that I know what the deck will use.
 
-![B1 — Getting started and creating slides (activity diagram)](images/instructor-getting-started-activity.jpeg)
+![Getting started and creating slides (activity diagram)](images/instructor-getting-started-activity.jpeg)
 
-### B2 — Finding and using templates
+### Instructor: finding and using templates
 
 **Story:** T05 — As an instructor browsing designs, I want understandable categories with previews, so that I can choose a template appropriate to my lecture.
 
-![B2 — Finding and using templates (activity diagram)](images/instructor-templates-activity.jpeg)
+![Finding and using templates (activity diagram)](images/instructor-templates-activity.jpeg)
 
-### C1 — Real-time collaboration
+### Student: real-time collaboration
 
 **Story:** S01 — As a student presenter, I want to edit a presentation with teammates in real time, so that we can see each other's progress.
 
 ![Student Real-Time Collaboration Activity Diagram](images/student-collaboration-activity.png)
 
-### C2 — Active recall
+### Student: active recall
 
 **Story:** S10 — As a student, I want to explain a concept aloud and receive feedback on missed points, so that I can practice active recall rather than only reread slides.
 
@@ -136,13 +136,13 @@ Existing capabilities named below are starting points. Each story specifies a ne
 
 ## Wireframes
 
-[Open the Figma design: Wireframes](https://www.figma.com/design/xSlHrGphQWleYhSJwaD4ST?node-id=7-2). It contains 27 black-and-white screens and states; the former v1 page was removed.
+[Open the Figma design: Wireframes](https://www.figma.com/design/xSlHrGphQWleYhSJwaD4ST?node-id=7-2). It contains 27 black-and-white screens and states.
 
 | Role | Screens covered | Main requirements |
 | --- | --- | --- |
 | Instructor | Home/guidance, new lecture, source selection and upload failure, template browser/no result/preview, generation/progress/failure, slide editing, pre-share review, sharing permissions (T01–T12) | T01–T10 |
-| Student reader | Shared deck, summary, concept-linked question, answer feedback, active recall input and feedback (S01–S06 in **Figma screen naming**) | S08–S10 |
-| Student presenter | Dashboard, live collaboration, version history, image replacement, target duration, rehearsal and feedback, export, spoken-command confirmation (S07–S15 in **Figma screen naming**) | S01–S07, S11 |
+| Student reader | Shared deck, summary, concept-linked question, answer feedback, active recall input and feedback (S01–S06) | S08–S10 |
+| Student presenter | Dashboard, live collaboration, version history, image replacement, target duration, rehearsal and feedback, export, spoken-command confirmation (S07–S15) | S01–S07, S11 |
 
 Figma frame numbers identify screens; the **user-story IDs above identify requirements**. Their numbers are intentionally independent. The screens are design proposals and do not assert that all 27 interactions exist in the current product.
 
@@ -162,71 +162,60 @@ Nothing that exists today is renamed or removed. The rows below are the only cha
 
 #### Screen index
 
-The prototype screens carry the live app's header and footer so that a reviewer recognises where they are; layout and content follow the Figma wireframes. Full-size PNG exports are in [images/wireframes](images/wireframes).
+Full-size PNG exports are in [images/wireframes](images/wireframes).
 
 **Instructor (T01–T12)**
 
-| Screen | What the instructor sees | Wireframe |
-| --- | --- | --- |
-| T01 Prepare your next lecture | First-time start page: Your lectures with Open lecture, the four Getting started steps, See how it works, Create a lecture. | <img src="images/wireframes/T01.png" width="360" alt="T01 Prepare your next lecture"> |
-| T02 Create a lecture | Step Material: Lecture title, Project, Recent lectures with Browse previous; Cancel, Continue. | <img src="images/wireframes/T02.png" width="360" alt="T02 Create a lecture"> |
-| T03 Add teaching material | Upload a file (PDF, DOCX or TXT) or Reuse material through Find previous material; Back, Continue. | <img src="images/wireframes/T03.png" width="360" alt="T03 Add teaching material"> |
-| T04 Upload failure | "File could not be added"; the material already selected is kept; Cancel, Try again, Choose a file. | <img src="images/wireframes/T04.png" width="360" alt="T04 Upload failure"> |
-| T05 Choose a design | Step Design: Search designs, category list, design cards with Preview; Back, Continue. | <img src="images/wireframes/T05.png" width="360" alt="T05 Choose a design"> |
-| T06 No matching designs | Empty state with Clear filters and Browse all designs; the source material stays selected. | <img src="images/wireframes/T06.png" width="360" alt="T06 No matching designs"> |
-| T07 Preview a design | Large preview with design notes; Customize, Use this design. | <img src="images/wireframes/T07.png" width="360" alt="T07 Preview a design"> |
-| T08 Generating slides | Step Generate: status line and progress bar, Return home; the deck opens in T10 when generation finishes. | <img src="images/wireframes/T08.png" width="360" alt="T08 Generating slides"> |
-| T09 Generation failure | "Slides could not be generated"; notes and design selection are safe; Edit material, Cancel, Retry. | <img src="images/wireframes/T09.png" width="360" alt="T09 Generation failure"> |
-| T10 Edit generated deck | Slide rail, slide preview, Edit tools (Edit text, Change layout, Replace image, Add slide), Review deck. | <img src="images/wireframes/T10.png" width="360" alt="T10 Edit generated deck"> |
-| T11 Review before sharing | Slide list, review status (slides checked, items to inspect), Open slide, Mark reviewed; Back to edit, Share lecture. | <img src="images/wireframes/T11.png" width="360" alt="T11 Review before sharing"> |
-| T12 Share lecture | Who can view, Lecture link; Cancel, Copy and share. | <img src="images/wireframes/T12.png" width="360" alt="T12 Share lecture"> |
+| Screen | Wireframe |
+| --- | --- |
+| T01 Prepare your next lecture | <img src="images/wireframes/T01.png" width="360" alt="T01 Prepare your next lecture"> |
+| T02 Create a lecture | <img src="images/wireframes/T02.png" width="360" alt="T02 Create a lecture"> |
+| T03 Add teaching material | <img src="images/wireframes/T03.png" width="360" alt="T03 Add teaching material"> |
+| T04 Upload failure | <img src="images/wireframes/T04.png" width="360" alt="T04 Upload failure"> |
+| T05 Choose a design | <img src="images/wireframes/T05.png" width="360" alt="T05 Choose a design"> |
+| T06 No matching designs | <img src="images/wireframes/T06.png" width="360" alt="T06 No matching designs"> |
+| T07 Preview a design | <img src="images/wireframes/T07.png" width="360" alt="T07 Preview a design"> |
+| T08 Generating slides | <img src="images/wireframes/T08.png" width="360" alt="T08 Generating slides"> |
+| T09 Generation failure | <img src="images/wireframes/T09.png" width="360" alt="T09 Generation failure"> |
+| T10 Edit generated deck | <img src="images/wireframes/T10.png" width="360" alt="T10 Edit generated deck"> |
+| T11 Review before sharing | <img src="images/wireframes/T11.png" width="360" alt="T11 Review before sharing"> |
+| T12 Share lecture | <img src="images/wireframes/T12.png" width="360" alt="T12 Share lecture"> |
 
 **Student reader (S01–S06)**
 
-| Screen | What the student sees | Wireframe |
-| --- | --- | --- |
-| S01 Shared lecture reader | Slide rail, slide preview, Concepts panel, Study this deck, Previous and Next. | <img src="images/wireframes/S01.png" width="360" alt="S01 Shared lecture reader"> |
-| S02 Lecture summary | Concept list and Key ideas, each with View slide; Back to deck, Practice concepts. | <img src="images/wireframes/S02.png" width="360" alt="S02 Lecture summary"> |
-| S03 Practice question | Question card with options; View source slide, Submit answer. | <img src="images/wireframes/S03.png" width="360" alt="S03 Practice question"> |
-| S04 Practice feedback | What you understood, What to revisit, source slide thumbnail; Try again, Next question, Open source slide. | <img src="images/wireframes/S04.png" width="360" alt="S04 Practice feedback"> |
-| S05 Explain a concept aloud | Transcript area, Start recording, Type instead, and the fallback note for a denied microphone; Back. | <img src="images/wireframes/S05.png" width="360" alt="S05 Explain a concept aloud"> |
-| S06 Recall feedback | Covered and Missing points, Lecture reference; Explain again, Next concept, View source. | <img src="images/wireframes/S06.png" width="360" alt="S06 Recall feedback"> |
+| Screen | Wireframe |
+| --- | --- |
+| S01 Shared lecture reader | <img src="images/wireframes/S01.png" width="360" alt="S01 Shared lecture reader"> |
+| S02 Lecture summary | <img src="images/wireframes/S02.png" width="360" alt="S02 Lecture summary"> |
+| S03 Practice question | <img src="images/wireframes/S03.png" width="360" alt="S03 Practice question"> |
+| S04 Practice feedback | <img src="images/wireframes/S04.png" width="360" alt="S04 Practice feedback"> |
+| S05 Explain a concept aloud | <img src="images/wireframes/S05.png" width="360" alt="S05 Explain a concept aloud"> |
+| S06 Recall feedback | <img src="images/wireframes/S06.png" width="360" alt="S06 Recall feedback"> |
 
 **Student presenter (S07–S15)**
 
-| Screen | What the student presenter sees | Wireframe |
-| --- | --- | --- |
-| S07 My presentations | Group presentation card (teammates, slides) with Open presentation and Share with team; Recent work; New presentation. | <img src="images/wireframes/S07.png" width="360" alt="S07 My presentations"> |
-| S08 Group deck | Slide rail with slide owners, slide preview, Collaborators panel; Invite teammates, Version history, Present. | <img src="images/wireframes/S08.png" width="360" alt="S08 Group deck"> |
-| S09 Version history | Version list and preview; Cancel, Restore this version. | <img src="images/wireframes/S09.png" width="360" alt="S09 Version history"> |
-| S10 Replace image | Slide preview and Select a visual (Choose an image, Browse library); Cancel, Replace image. | <img src="images/wireframes/S10.png" width="360" alt="S10 Replace image"> |
-| S11 Presentation timing | Target duration, Estimated timing with slides that need shorter delivery; Cancel, Save target. | <img src="images/wireframes/S11.png" width="360" alt="S11 Presentation timing"> |
-| S12 Practice your talk | Slide preview, Practice timer, Start rehearsal; Exit practice, Finish and review. | <img src="images/wireframes/S12.png" width="360" alt="S12 Practice your talk"> |
-| S13 Rehearsal feedback | Duration, pace, filler words, per-slide timeline; Back to deck, Practice again. | <img src="images/wireframes/S13.png" width="360" alt="S13 Rehearsal feedback"> |
-| S14 Export presentation | Google Slides, PDF or YAML; Cancel, Export. | <img src="images/wireframes/S14.png" width="360" alt="S14 Export presentation"> |
-| S15 Confirm spoken instruction | Detected instruction shown over the live deck; Add as slide text, Apply edit, Cancel. | <img src="images/wireframes/S15.png" width="360" alt="S15 Confirm spoken instruction"> |
+| Screen | Wireframe |
+| --- | --- |
+| S07 My presentations | <img src="images/wireframes/S07.png" width="360" alt="S07 My presentations"> |
+| S08 Group deck | <img src="images/wireframes/S08.png" width="360" alt="S08 Group deck"> |
+| S09 Version history | <img src="images/wireframes/S09.png" width="360" alt="S09 Version history"> |
+| S10 Replace image | <img src="images/wireframes/S10.png" width="360" alt="S10 Replace image"> |
+| S11 Presentation timing | <img src="images/wireframes/S11.png" width="360" alt="S11 Presentation timing"> |
+| S12 Practice your talk | <img src="images/wireframes/S12.png" width="360" alt="S12 Practice your talk"> |
+| S13 Rehearsal feedback | <img src="images/wireframes/S13.png" width="360" alt="S13 Rehearsal feedback"> |
+| S14 Export presentation | <img src="images/wireframes/S14.png" width="360" alt="S14 Export presentation"> |
+| S15 Confirm spoken instruction | <img src="images/wireframes/S15.png" width="360" alt="S15 Confirm spoken instruction"> |
 
-## Clickable prototype
+## Clickable Prototype
 
 **Public prototype:** [Slide Machine Prototype on Figma — anyone with the link can view, no login needed](https://www.figma.com/proto/KisgOB8gz8FuthCTWzZcll/Slide-Machine-Prototype?node-id=9-100&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=9%3A100&show-proto-sidebar=1&page-id=0%3A1)
 
-The prototype is one Figma page with 43 screens: 16 wireframes of existing screens (Landing, Log in, Register, Forgot password, Home, Menu drawer, Project page, Lecture page with live capture off and on, Add seed material, Lecture settings, Privacy & Sharing, Deck viewer, Account settings, Profile, Plans) and the 27 proposal screens T01–T12 and S01–S15 listed above. Every button that leads to another screen is linked. Buttons that act inside a screen (Edit text, Add slide, Previous and Next, Mark reviewed, the radio options) stay on the same screen.
+## Stakeholder Demo
 
-The left sidebar of the prototype lists three flows: Instructor, Student flows, and Instructor first-time guidance. Pick one, then click through. Clicking anywhere that is not a link briefly highlights every link on the screen, and the R key restarts the flow.
+**Lecture deck produced during the presentation:** [Slide Machine deck](https://theslidemachine.com/d/untitled-ebabb720)
 
-| Role | Starting screen | Screens in order |
-| --- | --- | --- |
-| Instructor | Landing (existing) | Landing, Log in, Home, + New lecture, T02 Create a lecture, T03 Add teaching material (T04 Upload failure on a bad file), T05 Choose a design (T06 No matching designs, T07 Preview a design), T08 Generating slides (T09 Generation failure; T10 opens by itself after 3 seconds), T10 Edit generated deck, T11 Review before sharing, T12 Share lecture, S01 Shared lecture reader as a student sees it |
-| Student reader | Home (existing) | A Discover row or a Project page card, S01 Shared lecture reader, S02 Lecture summary, S03 Practice question, S04 Practice feedback, S05 Explain a concept aloud, S06 Recall feedback |
-| Student presenter | Home (existing) | Menu drawer, S07 My presentations, S08 Group deck, then S09 Version history, S10 Replace image, S11 Presentation timing, S12 Practice your talk, S13 Rehearsal feedback and S14 Export presentation; Invite teammates opens Lecture settings › Privacy & Sharing (existing); the spoken-instruction path is Discover "Default project", Project page, Untitled lecture, live capture on, caption line, S15 Confirm spoken instruction |
-| Instructor first-time guidance | T01 Prepare your next lecture | Create a lecture opens T02, Open lecture opens T10, See how it works opens T02 |
+## Exit Ticket
 
-## Stakeholder demo
+**Quiz distributed during the presentation:** [Exit-ticket quiz (Google Form)](https://docs.google.com/forms/d/e/1FAIpQLScKNKPF_kt75wiQPQaB1vsjukL42oGMyZvzEnlRy267WcCN0g/viewform)
 
-**Lecture deck produced during the presentation:** ____________________
-
-## Exit ticket
-
-**Quiz distributed during the presentation:** ____________________
-
-**Corrections to generated questions before publishing:** ____________________
+**Corrections to generated questions before publishing:** No corrections were needed.
