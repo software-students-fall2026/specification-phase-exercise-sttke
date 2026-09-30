@@ -197,7 +197,7 @@ The prototype screens carry the live app's header and footer so that a reviewer 
 | Screen | What the student presenter sees | Wireframe |
 | --- | --- | --- |
 | S07 My presentations | Group presentation card (teammates, slides) with Open presentation and Share with team; Recent work; New presentation. | <img src="images/wireframes/S07.png" width="360" alt="S07 My presentations"> |
-| S08 Group deck | Slide rail with slide owners, slide preview, Collaborators panel; Invite teammates, Export, Version history, Present. | <img src="images/wireframes/S08.png" width="360" alt="S08 Group deck"> |
+| S08 Group deck | Slide rail with slide owners, slide preview, Collaborators panel; Invite teammates, Version history, Present. | <img src="images/wireframes/S08.png" width="360" alt="S08 Group deck"> |
 | S09 Version history | Version list and preview; Cancel, Restore this version. | <img src="images/wireframes/S09.png" width="360" alt="S09 Version history"> |
 | S10 Replace image | Slide preview and Select a visual (Choose an image, Browse library); Cancel, Replace image. | <img src="images/wireframes/S10.png" width="360" alt="S10 Replace image"> |
 | S11 Presentation timing | Target duration, Estimated timing with slides that need shorter delivery; Cancel, Save target. | <img src="images/wireframes/S11.png" width="360" alt="S11 Presentation timing"> |
